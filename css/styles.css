@@ -1,0 +1,82 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url("/Imagenes/fondo_cv1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #40924b;
+
+}
+
+.title{
+    display: flex;
+    align-items: start;
+    padding: 2px;
+    font-size: 40px;
+    margin-right: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu__item{
+    padding: 3px;
+}
+
+.menu__link{
+    color: #333333;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.menu__link:hover, .menu__link:active {
+    border-bottom: 2px solid #0073e6;
+    
+}
+
+.header{
+display: flex;
+padding: 0 4rem;
+}
+
+.contenido{
+    margin-top: 300px;
+}
+.slide{
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(79, 75, 75);
+
+}
+
+.slide{
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left:100%;
+      width:300%
+    }
+  
+    to {
+     margin-left:0%;
+     width:200%;
+   }
+  }
+
+.rodapie {
+    /*background: #fdfdfd;
+    color: #333333; 
+    padding: 1rem;
+    text-align: center;*/
+}
