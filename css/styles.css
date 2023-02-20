@@ -1,6 +1,8 @@
 *{
     font-family: 'Roboto', sans-serif;
+    color: #40924b;
 }
+
 
 body{
     background-image: url("/Imagenes/fondo_cv1.jpg");
@@ -8,7 +10,6 @@ body{
     background-attachment: fixed;
     background-size: cover;
     color: #40924b;
-
 }
 
 .title{
@@ -21,7 +22,9 @@ body{
 
 .nav{
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-end;
+   
 }
 
 .menu__item{
@@ -29,7 +32,7 @@ body{
 }
 
 .menu__link{
-    color: #333333;
+    
     padding: .5rem 1rem;
     font-size: 1.25rem;
     font-weight: bold;
@@ -42,27 +45,39 @@ body{
 
 .header{
 display: flex;
-padding: 0 4rem;
+padding: 0 10rem 0 4rem;
 }
 
 .contenido{
     margin-top: 300px;
 }
+.saludo{
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: auto;
+    text-align: center;
+    text-transform: uppercase;
+    
+
+}
 .slide{
     font-size: 4rem;
     font-weight: bold;
-    color: rgb(79, 75, 75);
+   
+    text-align: center;
 
 }
 
 .slide{
     animation-duration: 4s;
     animation-name: slidein;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 5;
     animation-direction: alternate;
+    animation-fill-mode: initial;
   }
   
   @keyframes slidein {
+    
     from {
       margin-left:100%;
       width:300%
@@ -70,11 +85,11 @@ padding: 0 4rem;
   
     to {
      margin-left:0%;
-     width:200%;
+     width:100%;
    }
   }
 
-.rodapie {
+.footer {
     /*background: #fdfdfd;
     color: #333333; 
     padding: 1rem;
