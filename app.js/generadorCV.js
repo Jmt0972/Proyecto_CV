@@ -1,3 +1,5 @@
+const botonGenerar = document.querySelector('#btn__generar')
+const botonVolver = document.querySelector('#btn__home')
 const nombre = document.querySelector('#nombre');
 const foto = document.querySelector('#foto');
 const direccion = document.querySelector('#direccion');
@@ -11,8 +13,8 @@ const edad = document.querySelector('#edad');
 const apellido = document.querySelector('#apellido');
 
 function fecha(evento){
-   var fn = new Date();
-    return fn.toDateString(evento);
+   const fn = new Date(evento);
+    return fn.toDateString();
 }
 
 
@@ -26,7 +28,8 @@ const generarUsuario = async () => {
     foto.src = datos.picture.medium;
     nombre.textContent = datos.name.first;
     apellido.textContent = datos.name.last;
-    direccion.textContent = datos.location.street.name;
+    direccion.textContent = datos.location.street.name +"  "+ 
+    datos.location.street.number;
     ciudad.textContent = datos.location.city;
     pais.textContent = datos.location.country;
     fechaNacimiento.textContent = fecha(datos.dob.date);
@@ -36,7 +39,10 @@ const generarUsuario = async () => {
     telefono.textContent = datos.cell;
 }
 
-
+const volver = ()=> {
+    history.back();
+  }
 
 document.addEventListener('DOMContentLoaded', generarUsuario);
-boton.addEventListener('click', generarUsuario);
+botonGenerar.addEventListener('click', generarUsuario);
+botonVolver.addEventListener('click',volver );
