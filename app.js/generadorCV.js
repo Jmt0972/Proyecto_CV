@@ -12,37 +12,37 @@ const telefono = document.querySelector('#telefono');
 const edad = document.querySelector('#edad');
 const apellido = document.querySelector('#apellido');
 
-function fecha(evento){
-   const fn = new Date(evento);
-    return fn.toDateString();
+function fecha(evento) {
+  const fn = new Date(evento);
+  return fn.toDateString();
 }
 
 
 const generarUsuario = async () => {
-   
-    const url = 'https://randomuser.me/api/';
-    const respuesta = await fetch(url);
-    const { results } = await respuesta.json();
-    const datos = results[0];
-    console.log(datos);
-    foto.src = datos.picture.medium;
-    nombre.textContent = datos.name.first;
-    apellido.textContent = datos.name.last;
-    direccion.textContent = datos.location.street.name +"  "+ 
+
+  const url = 'https://randomuser.me/api/';
+  const respuesta = await fetch(url);
+  const { results } = await respuesta.json();
+  const datos = results[0];
+  console.log(datos);
+  foto.src = datos.picture.medium;
+  nombre.textContent = datos.name.first;
+  apellido.textContent = datos.name.last;
+  direccion.textContent = datos.location.street.name + "  " +
     datos.location.street.number;
-    ciudad.textContent = datos.location.city;
-    pais.textContent = datos.location.country;
-    fechaNacimiento.textContent = fecha(datos.dob.date);
-    edad.textContent = datos.dob.age;
-    codigoPostal.textContent = datos.location.postcode;
-    correo.textContent = datos.email;
-    telefono.textContent = datos.cell;
+  ciudad.textContent = datos.location.city;
+  pais.textContent = datos.location.country;
+  fechaNacimiento.textContent = fecha(datos.dob.date);
+  edad.textContent = datos.dob.age;
+  codigoPostal.textContent = datos.location.postcode;
+  correo.textContent = datos.email;
+  telefono.textContent = datos.cell;
 }
 
-const volver = ()=> {
-    history.back();
-  }
+const volver = () => {
+  history.back();
+}
 
 document.addEventListener('DOMContentLoaded', generarUsuario);
 botonGenerar.addEventListener('click', generarUsuario);
-botonVolver.addEventListener('click',volver );
+botonVolver.addEventListener('click', volver);

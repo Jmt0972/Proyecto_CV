@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Proyecto CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,32 +13,36 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/normalize.css">
-   
-   
-    
+
+
+
 </head>
 
 <body class="body">
 
     <header class="header">
         <H1 class="title">Generador De Curiculum</H1>
-        <nav class="nav">
-            <ul class="list">
-                <li class="menu__item">
-                <a class="menu__link" href="/screens/mostrarCV.html">Ver CV</a>
-                </li>
-            </ul>
-        </nav>
-
     </header>
-    
-    <main class="contenido">
        
-        <p class="saludo">Bienvenidos</p>
-      <p class="slide">Seleccione una opcion del menu</p>
-
+    <main class="content">
+        <p class="slide">BIENVENIDOS</p>
+        <div class="w3-light-gray">
+            <div id="barra__progreso" class="w3-blue" style="height: 25px;width: 0;"></div>
+        </div>
+        <p id="demo">0%</p>
+        <br>
+        <div class="btn__container">
+            <button id="btn__barra" class="btn">INICIAR</button>
+        </div>
+        
+     <!--   <button id="btn__barra" class="w3-btn w3-light-green w3-border w3-border-red w3-round-large">INICIAR</button> -->
     </main>
-    
+
+    <script src="/app.js/barra-progreso.js"></script>
+
 </body>
-<footer class="footer"></footer>
+<div class="footer">
+    <p>JmTav &#128526; 2023 </p>
+</div>
+
 </html>
