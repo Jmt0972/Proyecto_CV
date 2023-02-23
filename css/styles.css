@@ -1,10 +1,12 @@
 * {
     color: #40924b;
 }
-html{
+
+html {
     height: 100%;
 }
 
+/*Sobreescribir ajustes predefinidos de W3.css*/
 body,
 h1,
 h2,
@@ -27,7 +29,7 @@ body {
     color: #40924b;
 }
 
-.header{
+.header {
     flex: 0 0 auto;
 }
 
@@ -39,7 +41,7 @@ body {
 
 }
 
-.content{
+.content {
     flex: 1 0 auto;
 }
 
@@ -57,6 +59,7 @@ body {
     text-align: center;
 }
 
+/*Animacion del saludo*/
 .slide {
     animation-duration: 3s;
     animation-name: slidein;
@@ -90,33 +93,35 @@ body {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #04AA6D;
+    background-color: rgb(8, 1, 152);
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px rgb(161, 160, 160);
 }
 
 .btn:hover {
-    background-color: #3e8e41
+    background-color: rgb(4, 4, 228);
 }
 
 .btn:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    background-color: rgb(20, 20, 253);
+    box-shadow: 0 5px rgb(171, 171, 171);
     transform: translateY(4px);
 }
 
 .footer {
     flex: 0 0 auto;
-    background: #999;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 30%, rgba(0, 212, 255, 1) 100%);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-   
+
 }
 
 .footer p {
+    color: rgb(93, 150, 220);
     display: flex;
-    text-align: center;
+    justify-content: center;
     margin-top: 5px;
     align-items: end;
 }
